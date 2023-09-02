@@ -1,7 +1,7 @@
 # stage 1
 FROM node:latest as node
-WORKDIR /app
-COPY ./dist .
+WORKDIR /usr/src/app
+COPY ./dist/hello-world-app .
 
 # stage 2
 FROM nginx:alpine
