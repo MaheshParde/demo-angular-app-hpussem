@@ -17,17 +17,17 @@ pipeline {
                 //sh "npm run build"
             }
         }
-        stage('Docker image build') {
+        /*stage('Docker image build') {
             steps {
                 sh 'docker build -t angular .'
                 sh 'docker tag angular maheshparde/angular-repo:${BUILD_NUMBER}'
             }
-        }
+        }*/
     }
-post{
+/*post{
     always{
         cleanWs()
     }
-}
+}*/
 }
 
