@@ -1,7 +1,7 @@
 # stage 1
 FROM node:latest as node
 WORKDIR /usr/src/app
-COPY ./dist/ .
+COPY ./dist/angular-app .
 
 # stage 2
 FROM nginx:alpine
