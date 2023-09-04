@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment # Kubernetes resource kind we are creating
+metadata:
+  name: angular-app-git
+  labels: 
+    app: angular-app-git
+spec:
+  selector:
+    matchLabels:
+      app: angular-app-git
+  replicas: 1 # Number of replicas that will be created for this deployment
+  template:
+    metadata:
+      labels:
+        app: angular-app-git
+    spec:
+      containers:
+        - name: angular-app-git
+          image: maheshparde/angular-repo:14
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 4001 # The port that the container is running on in the cluster
+
