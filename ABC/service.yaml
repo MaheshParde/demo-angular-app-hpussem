@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-app-git-service
+  labels:
+    app: angular-app-git
+spec:
+  selector:
+    app: angular-app-git
+  ports:
+  - name: angular-app-git
+    protocol: TCP
+    port: 4001 # Port exposed by the Service
+    targetPort: 4001 # Port that the containers in the Deployment are listening on
+  type: NodePort # Type of the Service (NodePort, ClusterIP, LoadBalancer, etc.)
+
